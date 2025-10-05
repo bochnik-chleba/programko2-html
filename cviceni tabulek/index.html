@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<head>
+    <title>tabulky, lists, forms</title>
+</head>
+<body>
+    <h2>Tabulky</h2>
+
+    <hr>
+    <p>Tabulka je vytvorena pomoci tagu <b>&lt;table&gt;</b>. Kazdy radek tabulky je oznacen tagem <b>&lt;tr&gt;</b> (table row). Kazda bunka v radku je oznacena tagem <b>&lt;td&gt;</b> (table data). Hlavickovy radek tabulky je oznacen tagem <b>&lt;th&gt;</b> (table header).</p>
+    <p>Tabulka muze mit ruzne atributy, napr. <b>border = "cislo"</b> urcuje sirku okraje tabulky v pixelech.</p>
+    <hr>
+    <!--Vscode mi automaticky nabizi text paragrafu, to je husty-->
+
+    <table border="5">
+        <tr align="center">
+            <th width="65">Jmeno</th>
+            <th width="65">Prijmeni</th>
+            <th width="65">Vek</th>
+        </tr>
+        <tr align="left">
+            <td>Jan</td>
+            <td>Novak</td>
+            <td>25</td>
+        </tr>
+        <tr align="right">
+            <td>Petr</td>
+            <td>Svoboda</td>
+            <td>30</td>
+        </tr>
+        <tr align="center">
+            <td>Eva</td>
+            <td>Kralova</td>
+            <td>22</td>
+        </tr>
+    </table>
+
+    <h2>Unordered listy</h2>
+
+    <hr>
+    <p>Unordered list (neutrizeny seznam) je vytvoren pomoci tagu <b>&lt;ul&gt;</b>. Kazda polozka seznamu je oznacena tagem <b>&lt;li&gt;</b> (list item).</p>
+    <p>Unordered list muze mit ruzne atributy, napr. <b>type = "symbol"</b> urcuje symbol, ktery bude pouzit jako odrazka (bullet).</p>
+    <hr>
+
+    <ul type="circle">
+        <li>Prvni polozka</li>
+        <li>Druha polozka</li>
+        <li>Treti polozka</li>
+        <ul>
+            <li>Podpolozka 1</li>
+            <li>Podpolozka 2</li>
+            <li>Podpolozka 3</li>
+        </ul>
+    </ul>
+
+    <h2>Ordered listy</h2>
+
+    <hr>
+    <p>Ordered list (trizeny seznam) je vytvoren pomoci tagu <b>&lt;ol&gt;</b>. Kazda polozka seznamu je oznacena tagem <b>&lt;li&gt;</b> (list item).</p>
+    <p>Ordered list muze mit ruzne atributy, napr. <b>type = "cislo"</b> urcuje symbol, ktery bude pouzit jako odrazka (bullet).</p>
+    <hr>
+
+    <ol type="I">
+        <li>Prvni polozka</li>
+        <li>Druha polozka</li>
+        <li>Treti polozka</li>
+        <ol>
+            <li>Podpolozka 1</li>
+            <li>Podpolozka 2</li>
+            <li>Podpolozka 3</li>
+        </ol>
+    </ol>
+
+    <h2>Formulare</h2>
+
+    <hr>
+    <p>Formular je vytvoren pomoci tagu <b>&lt;form&gt;</b>. Formular muze obsahovat ruzne ovladaci prvky, napr. textova pole, tlacitka, radio buttony, check boxy atd. Kazdy ovladaci prvek je oznacen tagem <b>&lt;input&gt;</b>.</p>
+    <p>Formular muze mit ruzne atributy, napr. <b>action = "url"</b> urcuje adresu, kam budou data z formularu odeslana po jeho odeslani. Atribut <b>method = "get/post"</b> urcuje zpusob odeslani dat (get nebo post).</p>
+    <p>Label dela napis pred pole, a muzeme na nej kliknout a psat rovnou do formulare</p>
+    <hr>
+    <form action="index.php" method="POST">
+
+        <label for="jmeno">Jmeno:</label>
+        <input type="text" id="jmeno" placeholder="Petr" size="14" name="jmeno"><br><br>
+
+        <label for="prijmeni">Prijmeni:</label>
+        <input type="text" id="prijmeni" placeholder="Pavel" size="14" name="prijmeni"><br><br>
+
+        <label for="vek">Vek:</label>
+        <input type="number" id="vek" min="1" max="120" placeholder="x" size="2" name="vek"> let.<br><br>
+        
+        <label for="pohlavi">Pohlavi:</label>
+
+        <input type="radio" id="muz" name="pohlavi" value="muz">
+        <label for="muz">Muz</label>
+
+        <input type="radio" id="zena" name="pohlavi" value="zena">
+        <label for="zena">Zena</label><br><br>
+        <!--Kdyz maji radio buttony stejny name, tak je to jedna skupina a jde vybrat jen jeden-->
+        
+        <label for="zajmy">Zajmy:</label>
+        <input type="checkbox" id="sport" name="zajmy" value="sport"> <label for="sport">Sport</label>
+        <input type="checkbox" id="kultura" name="zajmy" value="kultura"> <label for="kultura">Kultura</label>
+        <input type="checkbox" id="cestovani" name="zajmy" value="cestovani"> <label for="cestovani">Cestovani</label><br><br>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" placeholder="st0XXXXX@student.cichnovabrno.cz" size="32" name="email"><br><br>
+        <!--email ma validaci, musi mit @ a domena-->
+
+        <label for="heslo">Heslo:</label>
+        <input type="password" id="heslo" placeholder="cichnova123" name="heslo"><br><br>
+        <!--password skryje text-->
+
+        <label for="telefon">Telefon:</label>
+        <select name="predvolba" id="predvolba">
+            <option value="+420" selected >+420</option> <!--selected je vychozi hodnota-->
+            <option value="+421">+421</option>
+        </select>
+
+        <input type="tel" id="telefon" placeholder="123 456 789" size="8" maxlength="11" pattern="[0-9]{3}[0-9]{3}[0-9]{3}" name="telefon"><br><br>
+
+        <input type="submit" value="Odeslat(zatim nejde, protoze nemame backend)">
+        <input type="reset" value="Resetovat">
+    </form>
+</body>
+</html>
