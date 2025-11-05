@@ -10,6 +10,8 @@
 
 header{
     background-color: blueviolet;
+    background-image: url("https://professional.dce.harvard.edu/wp-content/uploads/sites/9/2021/11/building-consulting-business.gif");
+    background-size: cover;
 }
 
 nav{
@@ -17,6 +19,8 @@ nav{
     flex-direction: row;
     justify-content: space-between;
     pad: 100px;
+    color: gold;
+    font-size: large;
 }
 
 .links_container{
@@ -25,8 +29,7 @@ nav{
 }
 
 .links_container a{
-    text-decoration: none;
-    color: black;
+    color: gold;
     font-family: 'Courier New', Courier, monospace;
 }
 
@@ -44,16 +47,18 @@ header h1{
     justify-content: space-between;
     padding: 10%;
 }
-
+ 
 .card{
     width: 200px;
     background-color: black;
     padding: 20px 30px;
+    opacity: 100%;
 }
 
 .card h2, p{
     color: wheat;
     font-family: 'Courier New', Courier, monospace;
+    opacity: 100%;
 
 }
 
@@ -61,6 +66,7 @@ header h1{
     font-style: italic;
     font-size: smaller;
     padding: 8%;
+    opacity: 100%;
 }
 
 .card button{
@@ -68,11 +74,35 @@ header h1{
     background-color: transparent;
     border: 1px solid gold;
     padding: 5px 50px;
+    opacity: 100%;
 }
 
 #sec-2{
     display: grid;
     grid-template-rows: repeat(2,1fr);
     grid-column-gap: 20px;
+    width: 300px;
+    height: 350px;
+    justify-content:center;
+    margin: 50px;
 }
+
+#sec-2 .img{
+    grid-area:1/1/4/2;
+}
+
+#sec-2 .img img{
+    
+}
+
+#sec-2 .div2{
+    grid-area:1/2/2/4;
+    padding: 10%;
+}
+
+#sec-2 .div3{
+    grid-area:2/2/3/4;
+    padding: 10%;
+}
+
 
