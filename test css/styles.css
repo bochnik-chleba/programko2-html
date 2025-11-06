@@ -1,0 +1,47 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: blue;
+}
+
+
+
+section{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 33% 33% 33%;
+    grid-template-areas: "up up"
+    "mid mid"
+    "down img";
+    margin:20px;
+}
+.div1{
+    grid-area: up;
+    justify-content: center;
+    background-image: url("https://www.internationalinsurance.com/wp-content/uploads/2023/01/group-of-business-people-scaled.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 500px;
+}
+.div2{
+    grid-area: mid;
+    background-color: blue;
+}
+.div3{
+   
+    grid-area: down;
+}
+.div4{
+    
+    background-image: url("https://static.president.az/upload/2360x1196/2022/09/16/933329b3098afde758b553ce85c64f41_5531359.jpg");
+    grid-area: img;
+}
